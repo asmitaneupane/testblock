@@ -21,6 +21,6 @@
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
 function test_block_testblock_block_init() {
-	register_block_type( __DIR__ . '/build' );
+	register_block_type( __DIR__ . '/build/blocks/paragraph' );
 }
 add_action( 'init', 'test_block_testblock_block_init' );

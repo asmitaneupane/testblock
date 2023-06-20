@@ -29,8 +29,15 @@ import metadata from "./block.json";
  */
 
 export default () => {
-  registerBlockType(metadata.name, {
+  registerBlockType(
+    //   metadata.name, {
+    //   edit: Edit,
+    //   save: Save,
+    // }
+    "test-block/paragraph",
+    {
     edit: Edit,
-    save: Save,
-  });
+    save: Save  
+    }
+  );
 };

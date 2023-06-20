@@ -5,13 +5,22 @@
   "version": "0.1.0",
   "title": "Paragraph",
   "category": "text",
-  "icon": "flag",
+  "icon": "paragraph",
   "description": "A Gutenberg block to show your pride! This block enables you to type text and style it with the color font Gilbert from Type with Pride.",
+  "keywords": [
+    "paragraph",
+    "text"
+  ],
   "attributes": {
     "message": {
       "type": "string",
       "source": "text",
-      "selector": "div"
+      "selector": "p"
+    }
+  },
+  "example": {
+    "attributes": {
+      "content": "Hello World"
     }
   },
   "supports": {

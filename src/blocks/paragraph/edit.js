@@ -1,10 +1,21 @@
-import { useBlockProps } from "@wordpress/block-editor";
-import { __ } from "@wordpress/i18n";
+import { useBlockProps, RichText } from "@wordpress/block-editor";
 
-export default function Edit() {
+export default function Edit(props) {
+  const {
+    attributes: { content },
+    setAttributes,
+  } = props;
+  const onChangeContent = ( newContent ) => {
+    setAttributes( { content: newContent } );
+};
+  const blockProps = useBlockProps();
+
   return (
-    <p {...useBlockProps()}>
-      {__("Hello from the Block Editor", "block-example")}
-    </p>
+    <RichText
+      {...blockProps}
+      tagName="p"
+      onChange={onChangeContent}
+      value={content}
+    />
   );
 }

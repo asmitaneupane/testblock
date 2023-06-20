@@ -1,1 +1,1 @@
-export { default as registerParagraphBlock } from './paragraph'
+import './paragraph'

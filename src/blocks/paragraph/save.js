@@ -1,10 +1,12 @@
-import { useBlockProps } from "@wordpress/block-editor";
-import { __ } from "@wordpress/i18n";
+import { RichText } from '@wordpress/block-editor';
 
-export default function Save() {
+export default function Save(props) {
+  const {
+    attributes: { content },
+  } = props;
   return (
-    <p {...useBlockProps.save()}>
-      {__("Hello from the front end", "block-example")}
-    </p>
+    <p>
+			{ <RichText.Content value={ content } /> }
+		</p>
   );
 }
