@@ -34,10 +34,5 @@ export default () => {
       edit: Edit,
       save: Save,
     }
-    // "test-block/paragraph",
-    // {
-    // edit: Edit,
-    // save: Save  
-    // }
   );
 };

@@ -2,10 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/blocks/paragraph/edit.js":
-/*!**************************************!*\
-  !*** ./src/blocks/paragraph/edit.js ***!
-  \**************************************/
+/***/ "./src/blocks/buttons/edit.js":
+/*!************************************!*\
+  !*** ./src/blocks/buttons/edit.js ***!
+  \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -34,7 +34,8 @@ function Edit(props) {
   };
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)();
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, blockProps, {
-    tagName: "p",
+    placeholder: __('Text Here…', 'testblock'),
+    tagName: "a",
     onChange: onChangeContent,
     value: content
   }));
@@ -42,10 +43,10 @@ function Edit(props) {
 
 /***/ }),
 
-/***/ "./src/blocks/paragraph/save.js":
-/*!**************************************!*\
-  !*** ./src/blocks/paragraph/save.js ***!
-  \**************************************/
+/***/ "./src/blocks/buttons/save.js":
+/*!************************************!*\
+  !*** ./src/blocks/buttons/save.js ***!
+  \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -64,17 +65,17 @@ function Save(props) {
       content
     }
   } = props;
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText.Content, {
     value: content
   }));
 }
 
 /***/ }),
 
-/***/ "./src/blocks/paragraph/editor.scss":
-/*!******************************************!*\
-  !*** ./src/blocks/paragraph/editor.scss ***!
-  \******************************************/
+/***/ "./src/blocks/buttons/editor.scss":
+/*!****************************************!*\
+  !*** ./src/blocks/buttons/editor.scss ***!
+  \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -140,13 +141,13 @@ function _extends() {
 
 /***/ }),
 
-/***/ "./src/blocks/paragraph/block.json":
-/*!*****************************************!*\
-  !*** ./src/blocks/paragraph/block.json ***!
-  \*****************************************/
+/***/ "./src/blocks/buttons/block.json":
+/*!***************************************!*\
+  !*** ./src/blocks/buttons/block.json ***!
+  \***************************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"test-block/paragraph","version":"0.1.0","title":"Paragraph","category":"text","icon":"paragraph","description":"A Gutenberg block to show your pride! This block enables you to type text and style it with the color font Gilbert from Type with Pride.","keywords":["paragraph","text"],"attributes":{"message":{"type":"string","source":"text","selector":"p"}},"example":{"attributes":{"content":"Hello World"}},"supports":{"html":false},"textdomain":"testblock","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"test-block/button","version":"0.1.0","title":"Button","category":"text","icon":"button","description":"Redirect users to your important pages or websites by clicking button.","keywords":["button","icon"],"attributes":{"message":{"type":"string","source":"text","selector":"p"}},"example":{"attributes":{}},"supports":{"html":false},"textdomain":"testblock","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 
@@ -221,19 +222,19 @@ module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!***************************************!*\
-  !*** ./src/blocks/paragraph/index.js ***!
-  \***************************************/
+/*!*************************************!*\
+  !*** ./src/blocks/buttons/index.js ***!
+  \*************************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./editor.scss */ "./src/blocks/paragraph/editor.scss");
-/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/blocks/paragraph/edit.js");
-/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./save */ "./src/blocks/paragraph/save.js");
-/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./block.json */ "./src/blocks/paragraph/block.json");
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./editor.scss */ "./src/blocks/buttons/editor.scss");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/blocks/buttons/edit.js");
+/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./save */ "./src/blocks/buttons/save.js");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./block.json */ "./src/blocks/buttons/block.json");
 /**
  * Registers a new block provided a unique name and an object defining its behavior.
  *
@@ -268,13 +269,7 @@ __webpack_require__.r(__webpack_exports__);
   (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_4__.name, {
     edit: _edit__WEBPACK_IMPORTED_MODULE_2__["default"],
     save: _save__WEBPACK_IMPORTED_MODULE_3__["default"]
-  }
-  // "test-block/paragraph",
-  // {
-  // edit: Edit,
-  // save: Save  
-  // }
-  );
+  });
 });
 })();
 
