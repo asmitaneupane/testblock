@@ -1,0 +1,1 @@
+(()=>{"use strict";window.wp.blocks,window.wp.element,window.wp.blockEditor,window.wp.i18n})();
