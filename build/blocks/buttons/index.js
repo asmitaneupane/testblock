@@ -147,7 +147,7 @@ function _extends() {
   \***************************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"test-block/button","version":"0.1.0","title":"Button","category":"text","icon":"button","description":"Redirect users to your important pages or websites by clicking button.","keywords":["button","icon"],"attributes":{"message":{"type":"string","source":"text","selector":"p"}},"example":{"attributes":{}},"supports":{"html":false},"textdomain":"testblock","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"test-block/button","version":"0.1.0","title":"Button","category":"custom-layout-category","icon":"button","description":"Redirect users to your important pages or websites by clicking button.","keywords":["button","icon"],"attributes":{"message":{"type":"string","source":"text","selector":"p"}},"example":{"attributes":{}},"supports":{"html":false},"textdomain":"testblock","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 
@@ -226,9 +226,6 @@ var __webpack_exports__ = {};
   !*** ./src/blocks/buttons/index.js ***!
   \*************************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./editor.scss */ "./src/blocks/buttons/editor.scss");
@@ -265,12 +262,14 @@ __webpack_require__.r(__webpack_exports__);
  * @see https://developer.wordpress.org/block-editor/developers/block-api/#registering-a-block
  */
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_4__.name, {
+(() => {
+  (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)("test-block/button", {
+    category: "Test Blocks",
+    ..._block_json__WEBPACK_IMPORTED_MODULE_4__,
     edit: _edit__WEBPACK_IMPORTED_MODULE_2__["default"],
     save: _save__WEBPACK_IMPORTED_MODULE_3__["default"]
   });
-});
+})();
 })();
 
 /******/ })()

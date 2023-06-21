@@ -28,11 +28,11 @@ import metadata from "./block.json";
  * @see https://developer.wordpress.org/block-editor/developers/block-api/#registering-a-block
  */
 
-export default () => {
-  registerBlockType(
-      metadata.name, {
-      edit: Edit,
-      save: Save,
-    }
-  );
-};
+(() => {
+  registerBlockType("test-block/button", {
+    category: "Test Blocks",
+    ...metadata,
+    edit: Edit,
+    save: Save,
+  });
+})();

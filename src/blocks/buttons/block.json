@@ -4,7 +4,7 @@
 	"name": "test-block/button",
 	"version": "0.1.0",
 	"title": "Button",
-	"category": "text",
+	"category": "custom-layout-category",
 	"icon": "button",
     "description": "Redirect users to your important pages or websites by clicking button.",
 	"keywords": [ "button", "icon" ],

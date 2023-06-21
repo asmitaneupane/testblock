@@ -1,6 +1,2 @@
-import { registerParagraphBlock, registerButtonBlock } from "./blocks";
-
-//Register Blocks
-
-registerParagraphBlock();
-registerButtonBlock();
+import './blocks/paragraph';
+import './blocks/buttons';

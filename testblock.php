@@ -22,5 +22,23 @@
  */
 function test_block_testblock_block_init() {
 	register_block_type( __DIR__ . '/build/blocks/paragraph' );
+    register_block_type( __DIR__ . '/build/blocks/buttons' );
 }
 add_action( 'init', 'test_block_testblock_block_init' );
+
+
+function register_layout_category( $categories ) {
+	
+	$categories[] = array(
+		'slug'  => 'custom-layout-category',
+		'title' => 'Test Blocks'
+	);
+
+	return $categories;
+}
+
+if ( version_compare( get_bloginfo( 'version' ), '5.8', '>=' ) ) {
+	add_filter( 'block_categories_all', 'register_layout_category' );
+} else {
+	add_filter( 'block_categories', 'register_layout_category' );
+}
