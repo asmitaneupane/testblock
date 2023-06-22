@@ -24,13 +24,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 function Edit(props) {
   const {
     attributes,
     setAttributes
   } = props;
-  const [gradient, setGradient] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
 
   //block control
   const onChangeContent = newContent => {
@@ -57,10 +55,8 @@ function Edit(props) {
   };
   const onChangeGradient = currentGradient => {
     setAttributes({
-      gradient: currentGradient
+      gradients: currentGradient
     });
-    setGradient(currentGradient);
-    console.log(gradient);
   };
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.BlockControls, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.AlignmentToolbar, {
     value: attributes.alignment,
@@ -106,10 +102,36 @@ function Edit(props) {
   }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Gradient", "testblock")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.GradientPicker, {
     __nextHasNoMargin: true,
     onChange: onChangeGradient,
-    value: gradient,
-    gradients: attributes.gradients
-  })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
-    className: attributes.className,
+    value: attributes.gradients,
+    gradients: [{
+      "gradient": "linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%)",
+      "name": "Vivid cyan blue to vivid purple",
+      "slug": "vivid-cyan-blue-to-vivid-purple"
+    }, {
+      "gradient": "linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%)",
+      "name": "Light green cyan to vivid green cyan",
+      "slug": "light-green-cyan-to-vivid-green-cyan"
+    }, {
+      "gradient": "linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%)",
+      "name": "Luminous vivid amber to luminous vivid orange",
+      "slug": "luminous-vivid-amber-to-luminous-vivid-orange"
+    }, {
+      "gradient": "linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%)",
+      "name": "Luminous vivid orange to vivid red",
+      "slug": "luminous-vivid-orange-to-vivid-red"
+    }, {
+      "gradient": "linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%)",
+      "name": "Very light gray to cyan bluish gray",
+      "slug": "very-light-gray-to-cyan-bluish-gray"
+    }, {
+      "gradient": "linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%)",
+      "name": "Cool to warm spectrum",
+      "slug": "cool-to-warm-spectrum"
+    }]
+  })))), attributes.gradients && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("style", null, `.test-block-paragraph {
+              background: ${attributes.gradients}
+            }`), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.RichText, {
+    className: `test-block-paragraph ` + attributes.className,
     style: {
       textAlign: attributes.alignment,
       backgroundColor: attributes.bg_color,
@@ -222,7 +244,7 @@ module.exports = window["wp"]["i18n"];
   \*****************************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"test-block/paragraph","version":"0.1.0","title":"Paragraph","icon":"editor-paragraph","category":"custom-layout-category","description":"This block enables you to type text and style it.","keywords":["paragraph","text"],"attributes":{"content":{"type":"string","source":"html","selector":"p"},"alignment":{"type":"string","default":"none"},"gradients":{"type":"array","default":[{"gradient":"linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%)","name":"Vivid cyan blue to vivid purple","slug":"vivid-cyan-blue-to-vivid-purple"},{"gradient":"linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%)","name":"Light green cyan to vivid green cyan","slug":"light-green-cyan-to-vivid-green-cyan"},{"gradient":"linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%)","name":"Luminous vivid amber to luminous vivid orange","slug":"luminous-vivid-amber-to-luminous-vivid-orange"},{"gradient":"linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%)","name":"Luminous vivid orange to vivid red","slug":"luminous-vivid-orange-to-vivid-red"},{"gradient":"linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%)","name":"Very light gray to cyan bluish gray","slug":"very-light-gray-to-cyan-bluish-gray"},{"gradient":"linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%)","name":"Cool to warm spectrum","slug":"cool-to-warm-spectrum"}]}},"example":{"attributes":{"content":"Hello World","alignment":"center"},"bg_color":{"type":"string","default":"#ffffff"},"text_color":{"type":"string","default":"#000000"}},"supports":{"color":{"gradients":true}},"textdomain":"testblock","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"test-block/paragraph","version":"0.1.0","title":"Paragraph","icon":"editor-paragraph","category":"custom-layout-category","description":"This block enables you to type text and style it.","keywords":["paragraph","text"],"attributes":{"content":{"type":"string","source":"html","selector":"p"},"alignment":{"type":"string","default":"none"},"gradients":{"type":"string"}},"example":{"attributes":{"content":"Hello World","alignment":"center"},"bg_color":{"type":"string","default":"#ffffff"},"text_color":{"type":"string","default":"#000000"}},"supports":{"color":{"gradients":true}},"textdomain":"testblock","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 
